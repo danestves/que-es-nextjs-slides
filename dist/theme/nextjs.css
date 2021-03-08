@@ -14,14 +14,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --background-color: #ffffff;
+  --background-color: #282c34;
   --main-font: Inter, Helvetica, sans-serif;
   --main-font-size: 42px;
-  --main-color: #666666;
+  --main-color: #999999;
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
   --heading-font: Inter, Helvetica, sans-serif;
-  --heading-color: #111;
+  --heading-color: #eeeeee;
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
   --heading-text-transform: uppercase;
@@ -39,14 +39,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --selection-color: #fff; }
 
 .reveal-viewport {
-  background: #ffffff;
-  background-color: #ffffff; }
+  background: #282c34;
+  background-color: #282c34; }
 
 .reveal {
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
-  color: #666666; }
+  color: #999999; }
 
 .reveal ::selection {
   color: #fff;
@@ -73,7 +73,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #111;
+  color: #eeeeee;
   font-family: "Inter", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
@@ -266,7 +266,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * Frame helper
  *********************************************/
 .reveal .r-frame {
-  border: 4px solid #666666;
+  border: 4px solid #999999;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a .r-frame {
@@ -294,4 +294,4 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #ffffff; } }
+    background-color: #282c34; } }

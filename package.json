@@ -1,12 +1,13 @@
 {
-  "name": "reveal.js",
+  "name": "que-es-nextjs-slides",
   "version": "4.1.0",
-  "description": "The HTML Presentation Framework",
+  "description": "Made with reveal.js - The HTML Presentation Framework",
   "homepage": "https://revealjs.com",
   "subdomain": "revealjs",
   "main": "dist/reveal.js",
   "module": "dist/reveal.esm.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",

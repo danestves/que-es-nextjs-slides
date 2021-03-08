@@ -1,45 +1,42 @@
 /**
- * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ * NextJS theme for reveal.js.
  *
- * By Hakim El Hattab, http://hakim.se
+ * By Daniel Esteves, https://danestves.com
  */
-
 
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
-@import url(./fonts/source-sans-pro/source-sans-pro.css);
-
+@import url(https://rsms.me/inter/inter.css);
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #191919;
+$backgroundColor: #ffffff;
 
-$mainColor: #fff;
-$headingColor: #fff;
+$mainColor: #666666;
+$headingColor: #111;
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: "Inter", Helvetica, sans-serif;
+$headingFont: "Inter", Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColor: #696969;
+$linkColorHover: #000000;
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading4Size: 1em;
 
 // Change text colors against light slide backgrounds
 @include light-bg-text-color(#222);
-
+@include dark-bg-text-color(#fff);
 
 // Theme template ------------------------------
 @import "../template/theme";

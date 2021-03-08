@@ -1,40 +1,494 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>
+      ¿Qué es NextJS? La nueva manera de crear aplicaciones en NextJS
+    </title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/nextjs.css" id="theme" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/atom-one-dark.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="img/nextjs.svg"
+              alt="NextJS logo"
+              style="
+                height: 250px;
+                margin: 0 auto 1rem auto;
+                background: transparent;
+              "
+              class="demo-logo"
+            />
+          </a>
+          <h3>¿Qué es NextJS?</h3>
+          <p>
+            <small>La nueva manera de crear aplicaciones en NextJS</small>
+          </p>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section
+          data-background-iframe="https://danestves.com/es"
+          data-background-interactive
+        ></section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <section>
+            <h3>¿Qué es?</h3>
+            <p>
+              <small>
+                NextJS es una framework para React el cual nos brinda la
+                posibilidad de crear aplicaciones en tres posibles maneras:
+                Client Side Rendering (CSR), Server Side Rendering (SSR) y
+                Static Site Generation (SSG)
+              </small>
+            </p>
+          </section>
+
+          <section>
+            <h3>Client Side Rendering (CSR)</h3>
+            <p>
+              <small>
+                Es una solución de render que hace que en un único archivo HTML
+                se concentre todas las vistas, rutas, lógica y más para la
+                aplicación. En este caso estamos dejándole todo el trabajo de
+                render al navegador.
+              </small>
+            </p>
+            <img
+              src="img/csr.png"
+              alt="Client Side Rendering"
+              style="filter: grayscale(1)"
+            />
+          </section>
+
+          <section>
+            <h3>Server Side Rendering (SSR)</h3>
+            <p>
+              <small>
+                Esta solución de render viene desde hace años con PHP, en el que
+                construimos un HTML y con PHP le mandamos los datos pero no son
+                accesibles en el navegador. Quiere decir que cuando renderiza la
+                página trae los datos en tiempo real directamente de nuestro
+                servidor
+              </small>
+            </p>
+            <img
+              src="img/ssr.png"
+              alt="Server Side Rendering"
+              style="filter: grayscale(1)"
+            />
+          </section>
+
+          <section>
+            <h3>Static Site Generation (SSG)</h3>
+            <p>
+              <small>
+                Se crean páginas HTML a partir de plantillas o componentes y una
+                fuente de contenido como una base de datos o una REST API.
+                Normalmente se hace usando archivos de Markdown pero en la
+                actualidad se puede usar cualquier tipo de archivos siempre y
+                cuando los datos vengan en formato JSON
+              </small>
+            </p>
+            <img
+              src="img/ssg.jpg"
+              alt="Static Site Generation"
+              style="filter: grayscale(1)"
+            />
+          </section>
+        </section>
+
+        <section>
+          <h3>¿Qué nos ofrece?</h3>
+          <div class="mx-auto max-w-xl">
+            <img
+              src="img/features.png"
+              alt="Características de NextJS"
+              style="margin: 0; max-width: 100%; max-height: 100%"
+            />
+          </div>
+        </section>
+
+        <section data-auto-animate data-background-color="#282c34">
+          <h2 data-id="code-title" data-markdown>`/pages/index.jsx`</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
+              const Home = () => {
+                return (
+                  <div>
+                    <h1>Hello Word</h1>
+                    <p>This is my page made with NextJS</p>
+                  </div>
+                )
+              }
+
+              export default Home
+            </code></pre>
+          <p class="text-base">
+            Así se ve una página en NextJS, no es necesario importar React como
+            se hace normalmente porque NextJS ya lo hace por nosotros
+          </p>
+        </section>
+
+        <section data-auto-animate data-background-color="#282c34">
+          <h2 data-id="code-title" data-markdown>`src/views/index.jsx`</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers="1">
+              import React from "react"
+
+              const Home = () => {
+                return (
+                  <div>
+                    <h1>Hello Word</h1>
+                    <p>This is my page made with NextJS</p>
+                  </div>
+                )
+              }
+
+              export default Home
+            </code></pre>
+          <p class="text-base">
+            Normalmente en React debemos hacer esto para que el compilador
+            detecte React en ese archivo
+          </p>
+        </section>
+
+        <section data-auto-animate data-background-color="#282c34">
+          <h2 data-id="code-title" data-markdown>
+            `Client Side Data Fetching`
+          </h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers="4-12|14-22">
+              import React from "react"
+
+              const Home = () => {
+                const [data, setData] = useState(null)
+
+                React.useEffect(() => {
+                  fetch("...").then((result) => {
+                    setData(result.data)
+                  }).catch((err) => {
+                    console.error(err)
+                  });
+                }, [])
+                
+                return (
+                  <div>
+                    {data ? (
+                      <React.Fragment>
+                        <h1>{data.title}</h1>
+                        <p>{data.description}</p>
+                      </React.Fragment>
+                    ) : "Loading..."}
+                  </div>
+                )
+              }
+
+              export default Home
+            </code></pre>
+        </section>
+
+        <section data-auto-animate data-background-color="#282c34">
+          <h2 data-id="code-title" data-markdown>`getServerSideProps`</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers="6-13|1-3">
+              function Page({ data }) {
+                // Render data...
+              }
+
+              // This gets called on every request
+              export async function getServerSideProps() {
+                // Fetch data from external API
+                const res = await fetch(`https://.../data`)
+                const data = await res.json()
+
+                // Pass data to the page via props
+                return { props: { data } }
+              }
+
+              export default Page
+            </code></pre>
+        </section>
+
+        <section data-background-color="#282c34">
+          <section data-auto-animate>
+            <h2 data-id="code-title" data-markdown>`getStaticProps`</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers="15-28|2-10">
+              // posts will be populated at build time by getStaticProps()
+              function Blog({ posts }) {
+                return (
+                  <ul>
+                    {posts.map((post) => (
+                      <li>{post.title}</li>
+                    ))}
+                  </ul>
+                )
+              }
+
+              // This function gets called at build time on server-side.
+              // It won't be called on client-side, so you can even do
+              // direct database queries. See the "Technical details" section.
+              export async function getStaticProps() {
+                const res = await fetch('https://.../posts')
+                const posts = await res.json()
+
+                return {
+                  props: {
+                    posts,
+                  },
+                }
+              }
+
+              export default Blog
+            </code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title" data-markdown>`revalidate`</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers="23">
+              // posts will be populated at build time by getStaticProps()
+              function Blog({ posts }) {
+                return (
+                  <ul>
+                    {posts.map((post) => (
+                      <li>{post.title}</li>
+                    ))}
+                  </ul>
+                )
+              }
+
+              // This function gets called at build time on server-side.
+              // It won't be called on client-side, so you can even do
+              // direct database queries. See the "Technical details" section.
+              export async function getStaticProps() {
+                const res = await fetch('https://.../posts')
+                const posts = await res.json()
+
+                return {
+                  props: {
+                    posts,
+                  },
+                  revalidate: 1200
+                }
+              }
+
+              export default Blog
+            </code></pre>
+          </section>
+        </section>
+
+        <section data-background-color="#282c34">
+          <section data-auto-animate>
+            <div data-id="code-title" data-markdown>### `getStaticPaths`</div>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+              export async function getStaticPaths() {
+                return {
+                  paths: [
+                    { params: { ... } } // See the "paths" section below
+                  ],
+                  fallback: true or false // See the "fallback" section below
+                };
+              }
+            </code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <div data-id="code-title" data-markdown>### `paths`</div>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers="2-5">
+              return {
+                paths: [
+                  { params: { slug: 'how-to-use-google' } },
+                  { params: { slug: 'why-i-dont-use-nexjs' } }
+                ],
+                fallback: true
+              }
+            </code></pre>
+            <div data-markdown class="text-base">
+              Con esto NextJS generará estáticamente las páginas: <br />
+              - `https://myblog.com/posts/how-to-use-google` <br />
+              - `https://myblog.com/posts/why-i-dont-use-nexjs`
+            </div>
+            <div data-markdown class="text-base">
+              al momento del build en una template como `pages/posts/[slug].js`
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <div data-id="code-title" data-markdown>### `fallback`</div>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers="6">
+              return {
+                paths: [
+                  { params: { slug: 'how-to-use-google' } },
+                  { params: { slug: 'why-i-dont-use-nexjs' } }
+                ],
+                fallback: true
+              }
+            </code></pre>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="1"
+            >
+              Si `fallback` es `false`, entonces cualquier página que no sea
+              retornada por `getStaticPaths` resultará en un 404.
+            </div>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="2"
+            >
+              Si `fallback` es `true`, el comportamiento cambia:
+            </div>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="3"
+            >
+              - Las rutas devueltas por `getStaticPaths` se convertirán en HTML
+              en tiempo de compilación mediante `getStaticProps`.
+            </div>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="4"
+            >
+              - Las rutas que no se hayan generado en tiempo de compilación no
+              darán lugar a una página 404. En su lugar, Next.js servirá una
+              versión "fallback" de la página en la primera petición a la ruta.
+            </div>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="5"
+            >
+              - En segundo plano, Next.js generará estáticamente el `HTML` y el
+              `JSON` de la ruta solicitada. Esto incluye la ejecución de
+              getStaticProps.
+            </div>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="6"
+            >
+              - Una vez hecho esto, el navegador recibe el `JSON` de la ruta
+              generada. Esto se utilizará para renderizar automáticamente la
+              página con los props requeridos. Desde la perspectiva del usuario,
+              la página pasará de ser la página de reserva a la página completa.
+            </div>
+            <div
+              data-markdown
+              class="text-base fragment text-left"
+              data-fragment-index="7"
+            >
+              - Al mismo tiempo, Next.js añade esta ruta a la lista de páginas
+              pre-renderizadas. Las siguientes peticiones a la misma ruta
+              servirán la página generada, al igual que otras páginas
+              pre-renderizadas en el momento de la construcción.
+            </div>
+          </section>
+        </section>
+
+        <section data-auto-animate data-background-color="#282c34">
+          <div data-id="code-title" data-markdown>
+            ###### `pages/posts/[slug].js`
+          </div>
+          <div data-id="code-title" data-markdown>
+            ###### `getStaticPaths` + `getStaticProps`
+          </div>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers="13-21|23-31|1-11|4-8|10">
+            import { useRouter } from 'next/router'
+
+            function Post({ post }) {
+              const router = useRouter()
+
+              if (router.isFallback) {
+                return <div>Loading...</div>
+              }
+
+              // Render post...
+            }
+
+            export async function getStaticPaths() {
+              return {
+                paths: [
+                  { params: { slug: 'how-to-use-google' } },
+                  { params: { slug: 'why-i-dont-use-nexjs' } }
+                ],
+                fallback: true,
+              }
+            }
+
+            export async function getStaticProps({ params }) {
+              const res = await fetch(`https://.../posts/${params.slug}`)
+              const post = await res.json()
+
+              return {
+                props: { post },
+                revalidate: 1200,
+              }
+            }
+
+            export default Post
+          </code></pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>

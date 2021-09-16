@@ -1249,10 +1249,10 @@ babel-plugin-polyfill-regenerator@^0.1.2:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.1.5"
 
-babel-plugin-transform-html-import-to-string@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-html-import-to-string/-/babel-plugin-transform-html-import-to-string-0.0.1.tgz#949152515daad764cf55c51ab1787d206decf89d"
-  integrity sha1-lJFSUV2q12TPVcUasXh9IG3s+J0=
+babel-plugin-transform-html-import-to-string@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-html-import-to-string/-/babel-plugin-transform-html-import-to-string-2.0.0.tgz#d23e5dad5f0600ebf9fccce8e587c853f5abaa88"
+  integrity sha512-+N/mOjUIgKOcmcJsmYxb++l/ApbFxuBQDlgEC56H1CdABJzXjCZ04/yFMDF0/EfrZSGkx+heqX4P++qFrfpw6g==
 
 bach@^1.0.0:
   version "1.2.0"

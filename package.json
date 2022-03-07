@@ -37,7 +37,7 @@
     "babel-plugin-transform-html-import-to-string": "0.0.1",
     "colors": "^1.4.0",
     "core-js": "^3.9.1",
-    "fitty": "^2.3.3",
+    "fitty": "2.3.6",
     "glob": "^7.1.6",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

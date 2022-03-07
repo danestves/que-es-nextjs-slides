@@ -2375,10 +2375,10 @@ fined@^1.0.1:
     object.pick "^1.2.0"
     parse-filepath "^1.0.1"
 
-fitty@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/fitty/-/fitty-2.3.3.tgz#176eb3a5d756ae7cdb7f7841a9357046b15817a0"
-  integrity sha512-JBrXkAT29fGTMFA/O40zzxZTISK5qm4kx8gRU6x43a1OalC5kyVXG77RLbyFMFdFabd16nYX3HrRAe/hGKg+EQ==
+fitty@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/fitty/-/fitty-2.3.6.tgz#1dc2f3fbf6ffd4766b4fdd8b3d55a0cb01334ed1"
+  integrity sha512-ENp/+MqqYmXBGHC0dlltCX75+5zL5m0uiIGCgYdoThao99BrJpNYzEh3xrvhiy4b7O5X82CQT7dPTiB53H6stw==
 
 flagged-respawn@^1.0.0:
   version "1.0.1"

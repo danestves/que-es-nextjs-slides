@@ -52,7 +52,7 @@
     "marked": "^2.0.1",
     "node-qunit-puppeteer": "^2.0.3",
     "qunit": "^2.14.0",
-    "rollup": "^2.40.0",
+    "rollup": "2.70.1",
     "rollup-plugin-terser": "^7.0.2",
     "yargs": "^16.2.0"
   },
